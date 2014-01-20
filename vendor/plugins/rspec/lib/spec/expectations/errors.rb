@@ -6,7 +6,7 @@ module Spec
       eval(c) rescue nil
     end.compact.first
     
-    class ExpectationNotMetError < superclass
-    end
+    #class ExpectationNotMetError < superclass
+    #end
   end
 end

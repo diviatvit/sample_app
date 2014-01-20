@@ -16,6 +16,7 @@ end
 group :test do 
 # bundler requires these gems while running tests 
 # gem 'rspec' # gem 'faker' 
+gem 'test-unit', '1.2.3'
 end
 
 group :production do
