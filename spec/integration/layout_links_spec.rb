@@ -26,7 +26,7 @@ describe "Layout links" do
     response.should render_template('users/new')
   end
 
-=begin
+
 it "should have the right links on the layout" do
     visit root_path
     click_link "About"
@@ -40,6 +40,6 @@ it "should have the right links on the layout" do
     click_link "Sign up now!"
     response.should render_template('users/new')
   end
-=end
+
 
 end

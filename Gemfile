@@ -18,6 +18,9 @@ group :test do
 # gem 'rspec' # gem 'faker' 
 gem 'test-unit', '1.2.3'
 gem "factory_girl",'1.2.3'
+gem 'nokogiri', '1.6.1'
+gem 'rack_session_access', '0.1.1'
+gem 'rack-test', '0.6.2'
 end
 
 group :production do
