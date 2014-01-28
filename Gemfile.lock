@@ -13,7 +13,8 @@ GEM
     activesupport (2.3.18)
     builder (3.2.2)
     factory_girl (1.2.3)
-    hoe (3.8.0)
+    faker (0.3.1)
+    hoe (3.8.1)
       rake (>= 0.8, < 11.0)
     mini_portile (0.5.2)
     nokogiri (1.6.1)
@@ -36,12 +37,14 @@ GEM
     sqlite3-ruby (1.2.5)
     test-unit (1.2.3)
       hoe (>= 1.5.1)
+    will_paginate (2.3.12)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   factory_girl (= 1.2.3)
+  faker (= 0.3.1)
   nokogiri (= 1.6.1)
   pg (= 0.12.2)
   rack-test (= 0.6.2)
@@ -49,3 +52,4 @@ DEPENDENCIES
   rails (= 2.3.18)
   sqlite3-ruby (= 1.2.5)
   test-unit (= 1.2.3)
+  will_paginate (= 2.3.12)
