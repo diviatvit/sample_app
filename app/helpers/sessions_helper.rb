@@ -49,4 +49,14 @@ module SessionsHelper
   def clear_return_to
     session[:return_to] = nil
   end
+
+  def deny_access_to_create
+    flash[:notice]="You are signed in already"
+    redirect_to root_path
+  end
+
+  def already_signed_in
+    deny_access_to_create if signed_in?
+  end
+
 end

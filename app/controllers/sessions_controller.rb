@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+    before_filter :already_signed_in,   :only => [:create, :new]
+
   def new
   	@title = "Sign in"
   end
