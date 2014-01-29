@@ -10,9 +10,11 @@
 #
 
 class User < ActiveRecord::Base
-  	EmailRegex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  	has_many :microposts, :dependent => :destroy
+
+    EmailRegex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   	attr_accessor :password
-	attr_accessible :name, :email, :password, :password_confirmation
+	  attr_accessible :name, :email, :password, :password_confirmation
 
 	validates_presence_of(:name, :email, :password)
 	validates_length_of(:name, :maximum => 50)
@@ -40,6 +42,11 @@ class User < ActiveRecord::Base
     return user if user.has_password?(submitted_password)
   end
 
+  def feed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Micropost.all(:conditions => ["user_id = ?", id])
+  end
+  
   private
 
     def encrypt_password
